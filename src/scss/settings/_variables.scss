@@ -1,0 +1,54 @@
+/* ==========================================================================
+   #Variables
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Lato-Medium';
+    src: url('../fonts/Lato-Medium.woff') format('woff');
+}
+
+// Define color
+$color_base    : #222222;
+$color_primary : #f2561b;
+$color_black   : #000000;
+$color_white   : #ffffff;
+$color_gray    : #f2f2f2;
+$color_red     : #e31212;
+$color_green   : #00a587;
+$color_border  : #4d4d4d;
+$color_link    : #4d4d4d;
+
+// Define theme colors
+$theme-colors: () !default;
+$theme-colors: map-merge((
+	'default' : $color_base,
+	'primary' : $color_primary,
+	'black'   : $color_black,
+	'white'   : $color_white,
+	'gray'    : $color_gray,
+	'red'     : $color_red,
+	'green'   : $color_green,
+	'border'  : $color_border
+), $theme-colors);
+
+// Define theme font-family
+$font_base: 'Arial', sans-serif;
+
+// Define theme font-size
+$fs_base : 16;
+$fs_h1   : 50;
+$fs_h2   : 30;
+$fs_h3   : 24;
+$fs_h4   : 18;
+$fs_h5   : 16;
+$fs_h6   : 14;
+
+$lh_base : 27;
+$fw_base : 400;
+
+// Define space base
+$space_base      : 15;
+
+// Size content
+$pc_width_base   : 1080px;
+$pc_width_footer : 1110px;

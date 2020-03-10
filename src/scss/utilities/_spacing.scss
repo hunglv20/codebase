@@ -1,0 +1,90 @@
+/* ==========================================================================
+   #Spacing
+   ========================================================================== */
+@include repeat-unit-classes-map($repeatable-slugs, 0, 1, px, 5);
+
+.m {
+    &--auto {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &l {
+        &--auto {
+            margin-left: auto;
+        }
+    }
+    &r {
+        &--auto {
+            margin-right: auto;
+        }
+    }
+
+    &x {
+        &--auto {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @include bp('pc') {
+            &__pc {
+                &--auto {
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+        }
+
+        @include bp('sp') {
+            &__sp {
+                &--auto {
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+.p {
+    &--auto {
+        padding-right: auto;
+        padding-left: auto;
+    }
+
+    &l {
+        &--auto {
+            padding-left: auto;
+        }
+    }
+    &r {
+        &--auto {
+            padding-right: auto;
+        }
+    }
+
+    &x {
+        &--auto {
+            padding-right: auto;
+            padding-left: auto;
+        }
+
+        @include bp('pc') {
+            &__pc {
+                &--auto {
+                    padding-right: auto;
+                    padding-left: auto;
+                }
+            }
+        }
+
+        @include bp('sp') {
+            &__sp {
+                &--auto {
+                    padding-right: auto;
+                    padding-left: auto;
+                }
+            }
+        }
+    }
+}

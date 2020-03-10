@@ -1,0 +1,31 @@
+/* ==========================================================================
+   #Icons
+   ========================================================================== */
+$icons : (
+    'facebook' : ( 'width': calcRem(33px), 'height': calcRem(33px) ),
+);
+
+
+.c-icon {
+	display: inline-block;
+	@include bg-image('', no-repeat, center, center, contain);
+
+
+    @each $menu-key, $menu-val in $icons {
+        &--#{$menu-key} {
+            background-image: url("../images/icons/#{$menu-key}.png");
+            @each $size-key, $size-value in $menu-val {
+                #{$size-key}: $size-value;
+            }
+        }
+    }
+
+	@each $menu-key, $menu-val in $icons {
+        &--#{$menu-key}:hover {
+            background-image: url("../images/icons/#{$menu-key}_hover.png");
+            @each $size-key, $size-value in $menu-val {
+                #{$size-key}: $size-value;
+            }
+        }
+    }
+}

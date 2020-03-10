@@ -1,0 +1,65 @@
+/* ==========================================================================
+   #Breadcrumb
+   ========================================================================== */
+
+.breadcrumb {
+    float: left;
+    width: 100%;
+    line-height: 1.4;
+    padding: calcRem(2px) 0 calcRem(5px);
+
+    @include bp('pc') {
+        min-height: calcRem(30px);
+    }
+
+    @include bp('sp') {
+        line-height: 1.2;
+        min-height: calcRem(20px);
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+        line-height: 1.4;
+
+        @include bp('sp') {
+            line-height: 1.2;
+        }
+
+        a,
+        span {
+            position: relative;
+            display: inline;
+            vertical-align: middle;
+            font-size: calcRem(14px);
+            color: $color_white;
+            line-height: 1.4;
+            text-transform: uppercase;
+
+            @include bp('sp') {
+                @include font-size(10, 22.5);
+            }
+        }
+
+        a {
+            margin-right: calcRem(10px);
+            padding-right: calcRem(15px);
+
+            &:hover {
+                color: $color_primary;
+            }
+
+            &::after {
+                @include position(absolute, 'tr', 50%, 0, 1);
+                content: "";
+                margin-top: calcRem(-4px);
+                @include arrow_icon($color_white, 'right', 4px, 1px);
+
+                @include bp('sp') {
+                    margin-top: calcRem(-3px);
+                    padding: calcRem(3px);
+                }
+            }
+        }
+    }
+}
